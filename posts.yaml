@@ -3,6 +3,31 @@ series:
   health-guide: Health Guide
   rust-crash-course: Rust Crash Course
 posts:
+- file: posts/gym-etiquette-test.md
+  title: Gym Etiquette Test
+  time: 2019-04-01T05:32:00Z
+  description: "A recommended required exam for anyone to join a gym"
+- file: posts/typing-resistance.md
+  title: Typing Resistance
+  time: 2019-04-01T03:00:00Z
+  description: "Programming languages, like the human body, are subject to the phenomenon known as resistance. Learn how type systems in programming act like insulin in the body."
+- file: posts/shutting-down-haskell-lang.md
+  title: "Shutting down haskell-lang.org"
+  time: 2019-02-18T19:33:00Z
+  description: "I've recently shut down the haskell-lang.org website, redirecting to a new FP Complete Haskell site."
+- file: posts/call-for-new-issue-triager.md
+  title: "Call for new Stack issue triager"
+  time: 2019-02-12T08:35:00Z
+  description: "Interested in contributing back to the Stack project? Consider joining the Stack issue triager team!"
+- file: posts/mismatched-global-packages.md
+  title: "Mismatched global packages"
+  time: 2019-01-24T12:30:00Z
+  description: "How GHC can ship packages that are different than what's on Hackage, how this impacts Stack, and how to do better"
+- file: posts/kids-coding-part-4.md
+  title: "Kids Coding, Part 4"
+  time: 2019-01-18T11:31:44Z
+  description: "Part 4 of teaching my kids to code, teaching the six year old some coding"
+  series: kids-coding
 - file: posts/kids-coding-interlude-the-function-game.md
   title: "Kids Coding Interlude: the function game"
   time: 2018-12-16T16:00:00Z

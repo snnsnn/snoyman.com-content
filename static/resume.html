@@ -4,19 +4,13 @@
     <meta charset="utf-8">
     <title>Résumé of Michael Snoyman</title>
     <style>
-      section, header {
-        display: block;
-        clear: both;
+      body {
+        line-height: 1.4em;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      }
+
+      section {
         margin-bottom: 0.2in;
-      }
-
-      abbr {
-        border-bottom: 1px dotted #000;
-        cursor: help;
-      }
-
-      dl {
-        clear: both;
       }
 
       ul {
@@ -28,26 +22,8 @@
       }
 
       section#wrapper {
-        position: absolute;
-        left: 50%;
-        margin-left: -3.5in;
+        margin: 0 auto;
         width: 7in;
-      }
-
-      h1 {
-        clear: both;
-      }
-
-      header > h1.fn {
-        float: left;
-      }
-
-      header > h2.email {
-        float: right;
-      }
-
-      header > div {
-        clear: both;
       }
 
       ul {
@@ -62,19 +38,28 @@
         text-decoration: underline;
       }
 
-      h1 {
+      #contact {
+        width: 100%;
+      }
+
+      h1, #fullname {
         font-variant: small-caps;
         font-weight: 700;
         font-size: 14pt;
       }
 
-      h2 {
+      h2, #email {
         font-size: 12pt;
+        font-weight: 600;
       }
 
-      h3 {
+      h3, .country-name {
         font-size: 10pt;
         font-weight: 600;
+      }
+
+      .country-name {
+        padding-top: 0.5em;
       }
 
       body {
@@ -82,17 +67,9 @@
         font-family: sans-serif;
       }
 
-      .adr > .country-name {
-        padding-right: .2in;
-        display: block;
-        float: left;
+      .country-name {
         margin: 0;
         width: 1.3in;
-      }
-      .adr > address {
-        display: block;
-        float: left;
-        width: 3.5in;
       }
 
       #experience > h1 {
@@ -104,9 +81,6 @@
       }
 
       @media print {
-          abbr {
-              border: 0;
-          }
           a, a:visited {
               color: #000;
           }
@@ -118,30 +92,31 @@
 
     <section id="wrapper">
 
-      <header class="vcard">
-        <h1 class="fn">Michael Snoyman</h1>
-        <h2 class="email">
-          <a href="mailto:michael@snoyman.com">michael@snoyman.com</a>
-        </h2>
+      <table id="contact">
+        <tbody>
+          <tr>
+            <td colspan="2" id="fullname">Michael Snoyman</td>
+            <td id="email">
+              <a href="mailto:michael@snoyman.com">michael@snoyman.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="country-name">Israel</td>
+            <td class="street-address">Maale Hanarkisim 29, Maalot 2154018</td>
+            <td class="tel">+972.52.757.7771</td>
+          </tr>
+          <tr>
+            <td class="country-name" colspan="2">United States</td>
+            <td class="tel">+1.714-900.3549</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <div class="adr">
-          <h3 class="country-name">Israel</h3>
-          <address>
-            <span class="street-address">Maale Narkisim 29</span>,
-            <span class="locality">Maalot</span>
-            <span class="postal-code">21530</span>
-          </address>
-          <span class="tel">+972.52.757.7771</span>
-        </div>
+      <section id="about">
+        <h1>About Michael</h1>
 
-        <div class="adr">
-          <h3 class="country-name">United States</h3>
-          <address>
-            <span>&nbsp;</span>
-          </address>
-          <span class="tel">+1.714.900.3549</span>
-        </div>
-      </header>
+        <p>Michael is a leader in the Haskell open source community, running multiple pieces of core infrastructure and popular open source projects. He runs engineering activities at FP Complete, including software development, DevOps, Quality Assurance, and Project Management. He has extensive experience in the FinTech, Life Sciences, server side development, and blockchain spaces. His training includes software, actuarial sciences, applied math, economics, and statistics.</p>
+      </section>
 
       <section id="experience">
         <h1>Experience</h1>
@@ -150,12 +125,14 @@
         <h3>August 2012 to Present</h3>
 
         <ul>
-          <li>Spearheaded the Stackage project, a curated set of Haskell packages tested for compatibility. The Stackage project contains around 2000 packages and oversees contributions from hundreds of contributors, with a team of volunteer curators. Oversaw creation of build tooling and devops infrastructure to automate builds and host build artifacts (such as documentation).</li>
-          <li>Created the Stack build tool, initially for internal and customer work, ultimately rolling out to the community at large. Stack is an ambitious tool, supporting management of the Haskell toolchain, usage of curated package sets, reproducible build plans, and more advanced features like Docker integration. From many customer and community reports, Stack has revolutionized the way companies and individuals adopt Haskell.</li>
-          <li>Managed the FP Haskell Center project, the first commercial Haskell IDE. Ultimately this project was discontinued and replaced with a separate School of Haskell and focus on client-side build tools (including Stack and Intero). The technologies developed in this project became the basis for the FP Complete devops toolchain, now run as its own line of business within the company.</li>
+          <li>Designed architecture and oversaw implementation for multiple projects in the life sciences, FinTech, and blockchain space, including software development, DevOps, quality assurance, and project management. See <a href="https://www.fpcomplete.com/case-study">FP Complete case studies</a> for more details.</li>
+          <li>Spearheaded the <a href="https://www.stackage.org/">Stackage project</a>, a curated set of Haskell packages tested for compatibility. The Stackage project contains around 2000 packages and oversees contributions from hundreds of contributors, with a team of volunteer curators. Oversaw creation of build tooling and devops infrastructure to automate builds and host build artifacts (such as documentation).</li>
+          <li>Created the <a href="https://github.com/commercialhaskell/stack/">Stack build tool</a>, initially for internal and customer work, ultimately rolling out to the community at large. Stack is an ambitious tool, supporting management of the Haskell toolchain, usage of curated package sets, reproducible build plans, and more advanced features like Docker integration. From many customer and community reports, Stack has revolutionized the way companies and individuals adopt Haskell.</li>
+          <li>Managed the FP Haskell Center project, the first commercial Haskell IDE. Ultimately this project was discontinued and replaced with a separate <a href="https://www.schoolofhaskell.com/">School of Haskell</a> and focus on client-side build tools (including Stack and Intero). The technologies developed in this project became the basis for the FP Complete devops toolchain, now run as its own line of business within the company.</li>
           <li>Managed engineering efforts across a 30+ engineer team creating a Haskell FDA regulated medical device. This project pushed the boundaries on Haskell adoption within a Fortune 500 pharmaceutical company, and demonstrated the power cloud based computing could provide for scalable data science computing power. Our team created a low latency, scalable, and fault tolerant distributed computation framework for performing 500+ core monte carlo simulations in pure Haskell. We additionally created a complete systems test framework, FDA compliant RESTful frontend server, and various devops systems around the management of Personally Identifiable Information (PII).</li>
           <li>Managed multiple concurrent customer projects from the FP Complete side, providing Haskell implementation, devops implementation, network architecture, software architecture, testing, and training to geographically distributed customers with our fully remote team.</li>
           <li>Developed and maintained many Haskell resources, including libraries, training material, and documentation. Some notable contributions have included materials to address complex issues in the Haskell toolchain like asynchronous exceptions and control functions in monad transformer stacks. The goal has been, and continues to be, to make it easy and straightforward for developers to write correct and efficient code with Haskell.</li>
+          <li>Wrote articles and <a href="https://www.snoyman.com/#talks">delivered talks</a> on many educations topics in software development, especially focused on Haskell and Rust</li>
         </ul>
 
         <h2>Suite Solutions</h2>
@@ -235,7 +212,7 @@
         <ul>
           <li>Society of Actuaries exams P, FM, M and C</li>
           <li>Casualty Actuary Society exam 6</li>
-          <li>Completed all <abbr title="Validation by Educational Experience">VEE</abbr> requirements</li>
+          <li>Completed all Validation by Educational Experience (VEE) requirements</li>
         </ul>
       </section>
 
